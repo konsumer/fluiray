@@ -1,0 +1,17 @@
+{
+  "name": "fluidray",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node fluidray.js",
+    "test": "node test.js"
+  },
+  "keywords": [],
+  "author": "David Konsumer <konsumer@jetboystudio.com> (https://konsumer.js.org/)",
+  "license": "MIT",
+  "dependencies": {
+    "globby": "^13.1.2",
+    "raylib": "^0.9.2"
+  }
+}
