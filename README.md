@@ -16,6 +16,17 @@ cd /opt/fluiray
 npm i
 ```
 
+You need to have node & fluidsynth installed. On deb-based systems (pi os, ArcOS, ubuntu, etc) you can do that with this:
+
+```sh
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get -y install nodejs fluidsynth
+
+# not required, but it's 2 nice soundfonts
+sudo apt-get -y install fluid-soundfont-gm fluid-soundfont-gs
+```
+
+
 ## usage
 
 Run `npm start` in the dir. Args are the list of SF2 files you have available:
