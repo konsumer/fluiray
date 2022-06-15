@@ -53,6 +53,26 @@ async function main () {
       fluid.prog(0, i[currentInstrument].program)
     }
 
+    if (r.IsGamepadAvailable(0)) {
+      // DPAD up
+      if (r.IsGamepadButtonPressed(0, r.GAMEPAD_BUTTON_LEFT_FACE_UP)) {
+        currentMenuInstrument = mod(currentMenuInstrument - 1, i.length)
+      }
+      // DPAD down
+      if (r.IsGamepadButtonPressed(0, r.GAMEPAD_BUTTON_LEFT_FACE_DOWN)) {
+        currentMenuInstrument = mod(currentMenuInstrument + 1, i.length)
+      }
+      // X
+      if (r.IsGamepadButtonPressed(0, r.GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) {
+        currentInstrument = currentMenuInstrument
+        fluid.prog(0, i[currentInstrument].program)
+      }
+
+      if (r.IsGamepadButtonDown(0, r.GAMEPAD_BUTTON_MIDDLE_LEFT) && r.IsGamepadButtonDown(0, r.GAMEPAD_BUTTON_MIDDLE_RIGHT)) {
+        break
+      }
+    }
+
     r.BeginDrawing()
     r.ClearBackground(r.BLACK)
 
