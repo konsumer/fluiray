@@ -1,21 +1,26 @@
 This is files & info for setting up a linux system.
 
-I am using ArkOS, so these instructions will be for that.
+I am using ArkOS, so these instructions will be for that, but should work firn for pi os or debian or ubuntu.
 
 Install with this (over ssh):
 
 ```sh
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt-get -y install nodejs fluidsynth
+sudo apt update
+sudo apt-get -y install fluidsynth git
 
-git clone git@github.com:konsumer/fluiray.git /opt/fluiray
+wget https://deb.nodesource.com/node_18.x/pool/main/n/nodejs/nodejs_18.3.0-1nodesource1_arm64.deb
+sudo apt install ./nodejs_18.3.0-1nodesource1_arm64.deb
+
+git clone https://github.com/konsumer/fluiray.git
 cd /opt/fluiray
 npm i
 ```
 
 ### Emulation Station
 
-Install files in es-theme-epicnoir in your theme-dir (in /roms/themes/).
+```
+cp -R /opt/fluiray/system/es-theme-epicnoir/ /roms/themes/
+```
 
 Add this to `/etc/emulationstation/es_systems.cfg`:
 
@@ -29,12 +34,12 @@ Add this to `/etc/emulationstation/es_systems.cfg`:
 </system>
 ```
 
+Put your soundfonts in `/roms/sf2/`.
+
 You might also like
 
 - [love](https://github.com/Jetup13/es-theme-epicnoir/pull/2)
 - [apps](https://github.com/Jetup13/es-theme-epicnoir/pull/1)
-
-Put your soundfonts in `/roms/sf2/`.
 
 ## TODO
 

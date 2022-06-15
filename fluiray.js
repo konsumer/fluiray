@@ -68,6 +68,7 @@ async function main () {
         fluid.prog(0, i[currentInstrument].program)
       }
 
+      // START + SELECT exits
       if (r.IsGamepadButtonDown(0, r.GAMEPAD_BUTTON_MIDDLE_LEFT) && r.IsGamepadButtonDown(0, r.GAMEPAD_BUTTON_MIDDLE_RIGHT)) {
         break
       }
