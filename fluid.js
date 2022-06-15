@@ -1,11 +1,14 @@
 const EventEmitter = require('events')
 const { spawn, execSync } = require('child_process')
+const readline = require('readline')
 
 const regexVersion = /FluidSynth executable version ([0-9.]+)/gm
 
-// TODO: figure out how to collect output from commands
+// TODO: figure out how to better collect output from commands
+// TODO: handle remote synth, too
 
 // pick good default drivers for platform
+// TODO: what is good for windows?
 let defaultAudioDriver = 'portaudio'
 let defaultMidiDriver = 'coremidi'
 
@@ -15,16 +18,17 @@ if (process.platform === 'darwin') {
 }
 
 if (process.platform === 'linux') {
-  defaultAudioDriver = 'coreaudio'
-  defaultMidiDriver = 'coremidi'
+  defaultAudioDriver = 'alsa'
+  defaultMidiDriver = 'alsa_seq'
 }
 
 module.exports = class FluidSynth extends EventEmitter {
-  constructor (debug = true, audioDriver = defaultAudioDriver, midiDriver = defaultMidiDriver) {
+  constructor (debug = false, audioDriver = defaultAudioDriver, midiDriver = defaultMidiDriver) {
     super()
     this.debug = debug
+    this.output = []
     this.version = regexVersion.exec(execSync('fluidsynth --version').toString())[1].split('.')
-    const args = ['-q', '-d', '-p', 'fluidray', '-a', audioDriver, '-m', midiDriver]
+    const args = ['-q', '-d', '-p', 'fluidray', '-a', audioDriver, '-m', midiDriver, '-s']
     if (this.version[0] >= 2) {
       args.push('-o')
       args.push('midi.autoconnect=1')
@@ -34,39 +38,36 @@ module.exports = class FluidSynth extends EventEmitter {
     }
     this.ps = spawn('fluidsynth', args, {
       cwd: process.cwd(),
-      shell: true
+      shell: false,
+      stdio: 'pipe'
     })
-    this.ps.stdout.setEncoding('utf8')
     this.ps.stderr.setEncoding('utf8')
-    this.ps.stdout.on('data', this.handleOutput.bind(this))
+    this.ps.stdout.setEncoding('utf8')
     this.ps.stderr.on('data', d => this.emit('err', d))
 
-    // use an interval to defeat fluidsynth's output caching
+    this.rl = readline.createInterface({
+      input: this.ps.stdout
+    })
+
+    // this defeats fluidsynth's output cache
     this.ioInterval = setInterval(() => {
       this.ps.stdin.write('\n')
-    }, 50)
-  }
+    }, 100)
 
-  stop () {
-    clearInterval(this.ioInterval)
-  }
-
-  handleOutput (e) {
-    for (const line of e.split('\n')) {
-      if (line.startsWith('event')) {
+    this.rl.on('line', line => {
+      if (line && line.startsWith('event')) {
         const [, stage, n] = line.split('_')
         let [name, ...params] = n.split(' ')
         params = params.map(n => Number(n))
         if (stage === 'pre') {
           this.emit(name, params)
         }
-        // if (this.debug) {
-        //   console.log('EVENT:', { stage, name, params })
-        // }
+        this.emit(`${stage}_${name}`, params)
       }
-    }
+    })
   }
 
+  // run a command on server, with optional arg for checker-function (returns true or false, per line) to get output
   command (cmd) {
     if (this.debug) {
       console.log('COMMAND:', cmd)
@@ -74,13 +75,56 @@ module.exports = class FluidSynth extends EventEmitter {
     this.ps.stdin.write(cmd + '\n')
   }
 
-  // Shows help topics ('help TOPIC' for more info)
-  help (topic) {
-    this.command(`help ${topic || ''}`)
+  // Loads SoundFont (reset=0|1, def 1; bankofs=n, def 0) returns font ID (async)
+  load (filename, bankofs = 1) {
+    const rLoad = /^loaded SoundFont has ID ([0-9]+)/
+    let id
+    const lineWatcher = line => {
+      const r = rLoad.exec(line)
+      if (r) {
+        id = parseInt(r[1])
+      }
+      return r
+    }
+    this.rl.on('line', lineWatcher)
+    this.command(`load ${JSON.stringify(filename)} ${bankofs}`)
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        this.rl.off('line', lineWatcher)
+        resolve(id)
+      }, 1500)
+    })
+  }
+
+  // Get the available instruments for the font ID (async)
+  async inst (font) {
+    const rInst = /^([0-9]{3})-([0-9]{3}) (.+)/
+    const out = []
+
+    return new Promise((resolve, reject) => {
+      const lineWatcher = line => {
+        const m = line.match(rInst)
+        if (m) {
+          out.push({
+            bank: parseInt(m[1]),
+            program: parseInt(m[2]),
+            name: m[3]
+          })
+          // a bit of a hack
+          setTimeout(() => {
+            this.rl.off('line', lineWatcher)
+            resolve(out)
+          }, 1500)
+        }
+      }
+      this.rl.on('line', lineWatcher)
+      this.command(`inst ${font}`)
+    })
   }
 
   // Quit the synthesizer
   quit () {
+    clearInterval(this.ioInterval)
     this.command('quit')
   }
 
@@ -115,18 +159,13 @@ module.exports = class FluidSynth extends EventEmitter {
   }
 
   // Sends program-change message
-  prog (num) {
-    this.command(`prog ${num}`)
+  prog (num, channel = '') {
+    this.command(`prog ${num} ${channel}`)
   }
 
   // Combination of bank-select and program-change
   select (prog) {
     this.command(`select ${prog}`)
-  }
-
-  // Loads SoundFont (reset=0|1, def 1; bankofs=n, def 0)
-  load (filename, bankofs = 1) {
-    this.command(`load ${filename} ${bankofs}`)
   }
 
   // Unloads SoundFont by ID (reset=0|1, default 1)
@@ -142,11 +181,6 @@ module.exports = class FluidSynth extends EventEmitter {
   // Display the list of loaded SoundFonts
   fonts () {
     this.command('fonts')
-  }
-
-  // Print out the available instruments for the font
-  inst (font) {
-    this.command(`inst ${font}`)
   }
 
   // Print out preset of all channels

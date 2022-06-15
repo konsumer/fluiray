@@ -1,0 +1,1624 @@
+[
+  {
+    "id": 1,
+    "file": "/Users/konsumer/Documents/otherdev/lovesynth/sf2/Kirby Soundfont.sf2",
+    "instruments": [
+      {
+        "bank": 0,
+        "program": 0,
+        "name": "Acoustic Grand Piano"
+      },
+      {
+        "bank": 0,
+        "program": 1,
+        "name": "Bright Grand Piano"
+      },
+      {
+        "bank": 0,
+        "program": 2,
+        "name": "Electric Grand Piano"
+      },
+      {
+        "bank": 0,
+        "program": 3,
+        "name": "Honky Tonk Piano"
+      },
+      {
+        "bank": 0,
+        "program": 4,
+        "name": "Rhodes Piano"
+      },
+      {
+        "bank": 0,
+        "program": 5,
+        "name": "FM Piano"
+      },
+      {
+        "bank": 0,
+        "program": 6,
+        "name": "Harpsichord"
+      },
+      {
+        "bank": 0,
+        "program": 7,
+        "name": "Clavinet"
+      },
+      {
+        "bank": 0,
+        "program": 8,
+        "name": "Celeste"
+      },
+      {
+        "bank": 0,
+        "program": 9,
+        "name": "Glockenspiel"
+      },
+      {
+        "bank": 0,
+        "program": 10,
+        "name": "Music Box"
+      },
+      {
+        "bank": 0,
+        "program": 11,
+        "name": "Vibraphone"
+      },
+      {
+        "bank": 0,
+        "program": 12,
+        "name": "Marimba"
+      },
+      {
+        "bank": 0,
+        "program": 13,
+        "name": "Xylophone"
+      },
+      {
+        "bank": 0,
+        "program": 14,
+        "name": "Tubular Bells"
+      },
+      {
+        "bank": 0,
+        "program": 15,
+        "name": "Dulcimer"
+      },
+      {
+        "bank": 0,
+        "program": 16,
+        "name": "Drawbar Organ"
+      },
+      {
+        "bank": 0,
+        "program": 17,
+        "name": "Percussive Organ"
+      },
+      {
+        "bank": 0,
+        "program": 18,
+        "name": "Rock Organ"
+      },
+      {
+        "bank": 0,
+        "program": 19,
+        "name": "Church Organ"
+      },
+      {
+        "bank": 0,
+        "program": 20,
+        "name": "Reed Organ"
+      },
+      {
+        "bank": 0,
+        "program": 21,
+        "name": "Accordian"
+      },
+      {
+        "bank": 0,
+        "program": 22,
+        "name": "Harmonica"
+      },
+      {
+        "bank": 0,
+        "program": 23,
+        "name": "Bandoneon"
+      },
+      {
+        "bank": 0,
+        "program": 24,
+        "name": "Nylon Guitar"
+      },
+      {
+        "bank": 0,
+        "program": 25,
+        "name": "Steel Guitar"
+      },
+      {
+        "bank": 0,
+        "program": 26,
+        "name": "Jazz Guitar"
+      },
+      {
+        "bank": 0,
+        "program": 27,
+        "name": "Clean Guitar"
+      },
+      {
+        "bank": 0,
+        "program": 28,
+        "name": "Muted Guitar"
+      },
+      {
+        "bank": 0,
+        "program": 29,
+        "name": "Overdriven Guitar"
+      },
+      {
+        "bank": 0,
+        "program": 30,
+        "name": "Distortion Guitar"
+      },
+      {
+        "bank": 0,
+        "program": 31,
+        "name": "Guitar Harmonics"
+      },
+      {
+        "bank": 0,
+        "program": 32,
+        "name": "Acoustic Bass"
+      },
+      {
+        "bank": 0,
+        "program": 33,
+        "name": "Finger Bass"
+      },
+      {
+        "bank": 0,
+        "program": 34,
+        "name": "Pick Bass"
+      },
+      {
+        "bank": 0,
+        "program": 35,
+        "name": "Fretless Bass"
+      },
+      {
+        "bank": 0,
+        "program": 36,
+        "name": "Slap Bass 1"
+      },
+      {
+        "bank": 0,
+        "program": 37,
+        "name": "Slap Bass 2"
+      },
+      {
+        "bank": 0,
+        "program": 38,
+        "name": "Synth Bass 1"
+      },
+      {
+        "bank": 0,
+        "program": 39,
+        "name": "Synth Bass 2"
+      },
+      {
+        "bank": 0,
+        "program": 40,
+        "name": "Violin (Full)"
+      },
+      {
+        "bank": 0,
+        "program": 41,
+        "name": "Viola"
+      },
+      {
+        "bank": 0,
+        "program": 42,
+        "name": "Cello"
+      },
+      {
+        "bank": 0,
+        "program": 43,
+        "name": "Contrabass"
+      },
+      {
+        "bank": 0,
+        "program": 44,
+        "name": "Tremolo Strings"
+      },
+      {
+        "bank": 0,
+        "program": 45,
+        "name": "Pizzicato Strings"
+      },
+      {
+        "bank": 0,
+        "program": 46,
+        "name": "Harp"
+      },
+      {
+        "bank": 0,
+        "program": 47,
+        "name": "Timpani"
+      },
+      {
+        "bank": 0,
+        "program": 48,
+        "name": "Strings Ensemble"
+      },
+      {
+        "bank": 0,
+        "program": 49,
+        "name": "Slow Strings"
+      },
+      {
+        "bank": 0,
+        "program": 50,
+        "name": "Synth Strings 1"
+      },
+      {
+        "bank": 0,
+        "program": 51,
+        "name": "Synth Strings 2"
+      },
+      {
+        "bank": 0,
+        "program": 52,
+        "name": "Choir Aahs"
+      },
+      {
+        "bank": 0,
+        "program": 53,
+        "name": "Voice Doohs"
+      },
+      {
+        "bank": 0,
+        "program": 54,
+        "name": "Synth Voice"
+      },
+      {
+        "bank": 0,
+        "program": 55,
+        "name": "Orchestral Stab"
+      },
+      {
+        "bank": 0,
+        "program": 56,
+        "name": "Trumpet"
+      },
+      {
+        "bank": 0,
+        "program": 57,
+        "name": "Trombone"
+      },
+      {
+        "bank": 0,
+        "program": 58,
+        "name": "Tuba"
+      },
+      {
+        "bank": 0,
+        "program": 59,
+        "name": "Muted Trumpet"
+      },
+      {
+        "bank": 0,
+        "program": 60,
+        "name": "French Horns"
+      },
+      {
+        "bank": 0,
+        "program": 61,
+        "name": "Brass Section"
+      },
+      {
+        "bank": 0,
+        "program": 62,
+        "name": "Synth Brass 1"
+      },
+      {
+        "bank": 0,
+        "program": 63,
+        "name": "Synth Brass 2"
+      },
+      {
+        "bank": 0,
+        "program": 64,
+        "name": "Soprano Sax"
+      },
+      {
+        "bank": 0,
+        "program": 65,
+        "name": "Alto Sax"
+      },
+      {
+        "bank": 0,
+        "program": 66,
+        "name": "Tenor Sax"
+      },
+      {
+        "bank": 0,
+        "program": 67,
+        "name": "Baritone Sax"
+      },
+      {
+        "bank": 0,
+        "program": 68,
+        "name": "Oboe"
+      },
+      {
+        "bank": 0,
+        "program": 69,
+        "name": "English Horn"
+      },
+      {
+        "bank": 0,
+        "program": 70,
+        "name": "Bassoon"
+      },
+      {
+        "bank": 0,
+        "program": 71,
+        "name": "Clarinet"
+      },
+      {
+        "bank": 0,
+        "program": 72,
+        "name": "Piccolo"
+      },
+      {
+        "bank": 0,
+        "program": 73,
+        "name": "Flute"
+      },
+      {
+        "bank": 0,
+        "program": 74,
+        "name": "Recorder"
+      },
+      {
+        "bank": 0,
+        "program": 75,
+        "name": "Pan Flute"
+      },
+      {
+        "bank": 0,
+        "program": 76,
+        "name": "Blown Bottle"
+      },
+      {
+        "bank": 0,
+        "program": 77,
+        "name": "Shakuhachi"
+      },
+      {
+        "bank": 0,
+        "program": 78,
+        "name": "Whistle"
+      },
+      {
+        "bank": 0,
+        "program": 79,
+        "name": "Ocarina"
+      },
+      {
+        "bank": 0,
+        "program": 80,
+        "name": "Square Wave"
+      },
+      {
+        "bank": 0,
+        "program": 81,
+        "name": "Sawtooth Wave"
+      },
+      {
+        "bank": 0,
+        "program": 82,
+        "name": "Calliope"
+      },
+      {
+        "bank": 0,
+        "program": 83,
+        "name": "Chiffer Lead"
+      },
+      {
+        "bank": 0,
+        "program": 84,
+        "name": "Charang Lead"
+      },
+      {
+        "bank": 0,
+        "program": 85,
+        "name": "Solo Vox"
+      },
+      {
+        "bank": 0,
+        "program": 86,
+        "name": "Brass Section Fifth"
+      },
+      {
+        "bank": 0,
+        "program": 87,
+        "name": "Bass Lead"
+      },
+      {
+        "bank": 0,
+        "program": 88,
+        "name": "Fantasia"
+      },
+      {
+        "bank": 0,
+        "program": 89,
+        "name": "Warm Pad"
+      },
+      {
+        "bank": 0,
+        "program": 90,
+        "name": "Polysynth"
+      },
+      {
+        "bank": 0,
+        "program": 91,
+        "name": "Space Voice"
+      },
+      {
+        "bank": 0,
+        "program": 92,
+        "name": "Bowed Pad"
+      },
+      {
+        "bank": 0,
+        "program": 93,
+        "name": "Metal Pad"
+      },
+      {
+        "bank": 0,
+        "program": 94,
+        "name": "Halo Pad"
+      },
+      {
+        "bank": 0,
+        "program": 95,
+        "name": "Sweep Pad"
+      },
+      {
+        "bank": 0,
+        "program": 96,
+        "name": "Ice Rain"
+      },
+      {
+        "bank": 0,
+        "program": 97,
+        "name": "Soundtrack"
+      },
+      {
+        "bank": 0,
+        "program": 98,
+        "name": "Crystal"
+      },
+      {
+        "bank": 0,
+        "program": 99,
+        "name": "Atmosphere"
+      },
+      {
+        "bank": 0,
+        "program": 100,
+        "name": "Brightness"
+      },
+      {
+        "bank": 0,
+        "program": 101,
+        "name": "Goblin"
+      },
+      {
+        "bank": 0,
+        "program": 102,
+        "name": "Echo Drops"
+      },
+      {
+        "bank": 0,
+        "program": 103,
+        "name": "Star Theme"
+      },
+      {
+        "bank": 0,
+        "program": 104,
+        "name": "Sitar"
+      },
+      {
+        "bank": 0,
+        "program": 105,
+        "name": "Banjo"
+      },
+      {
+        "bank": 0,
+        "program": 106,
+        "name": "Shamisen"
+      },
+      {
+        "bank": 0,
+        "program": 107,
+        "name": "Koto"
+      },
+      {
+        "bank": 0,
+        "program": 108,
+        "name": "Kalimba"
+      },
+      {
+        "bank": 0,
+        "program": 109,
+        "name": "Bagpipes"
+      },
+      {
+        "bank": 0,
+        "program": 110,
+        "name": "Fiddle"
+      },
+      {
+        "bank": 0,
+        "program": 111,
+        "name": "Shenai"
+      },
+      {
+        "bank": 0,
+        "program": 112,
+        "name": "Tinker Bell"
+      },
+      {
+        "bank": 0,
+        "program": 113,
+        "name": "Agogo"
+      },
+      {
+        "bank": 0,
+        "program": 114,
+        "name": "Steel Drum"
+      },
+      {
+        "bank": 0,
+        "program": 115,
+        "name": "Woodblock"
+      },
+      {
+        "bank": 0,
+        "program": 116,
+        "name": "Taiko Drum"
+      },
+      {
+        "bank": 0,
+        "program": 117,
+        "name": "Melodic Tom"
+      },
+      {
+        "bank": 0,
+        "program": 118,
+        "name": "Synth Drum"
+      },
+      {
+        "bank": 0,
+        "program": 119,
+        "name": "Reverse Cymbal"
+      },
+      {
+        "bank": 0,
+        "program": 120,
+        "name": "Guitar Fret Noise"
+      },
+      {
+        "bank": 0,
+        "program": 121,
+        "name": "Pan Flute Puff"
+      },
+      {
+        "bank": 0,
+        "program": 122,
+        "name": "Seashore"
+      },
+      {
+        "bank": 0,
+        "program": 123,
+        "name": "Birds"
+      },
+      {
+        "bank": 0,
+        "program": 124,
+        "name": "Telephone"
+      },
+      {
+        "bank": 0,
+        "program": 125,
+        "name": "Helicopter"
+      },
+      {
+        "bank": 0,
+        "program": 126,
+        "name": "Applause"
+      },
+      {
+        "bank": 0,
+        "program": 127,
+        "name": "File Select SFX"
+      },
+      {
+        "bank": 1,
+        "program": 8,
+        "name": "Celeste 2"
+      },
+      {
+        "bank": 1,
+        "program": 13,
+        "name": "Xylophone 2"
+      },
+      {
+        "bank": 1,
+        "program": 16,
+        "name": "Drawbar Organ 2"
+      },
+      {
+        "bank": 1,
+        "program": 29,
+        "name": "Overdriven Guitar 2"
+      },
+      {
+        "bank": 1,
+        "program": 30,
+        "name": "Distortion Guitar 2"
+      },
+      {
+        "bank": 1,
+        "program": 31,
+        "name": "Guitar Harmonics 2"
+      },
+      {
+        "bank": 1,
+        "program": 32,
+        "name": "Acoustic Bass 2"
+      },
+      {
+        "bank": 1,
+        "program": 33,
+        "name": "Finger Bass 2"
+      },
+      {
+        "bank": 1,
+        "program": 34,
+        "name": "Pick Bass 2"
+      },
+      {
+        "bank": 1,
+        "program": 35,
+        "name": "Fretless Bass 2"
+      },
+      {
+        "bank": 1,
+        "program": 36,
+        "name": "Slap Bass 3"
+      },
+      {
+        "bank": 1,
+        "program": 38,
+        "name": "Synth Bass 101"
+      },
+      {
+        "bank": 1,
+        "program": 45,
+        "name": "Pizzicato Strings 2"
+      },
+      {
+        "bank": 1,
+        "program": 47,
+        "name": "Timpani Roll"
+      },
+      {
+        "bank": 1,
+        "program": 48,
+        "name": "Strings Ensemble 2"
+      },
+      {
+        "bank": 1,
+        "program": 49,
+        "name": "Slow Strings 2"
+      },
+      {
+        "bank": 1,
+        "program": 52,
+        "name": "Mono Choir Aahs"
+      },
+      {
+        "bank": 1,
+        "program": 53,
+        "name": "Voice Oohs"
+      },
+      {
+        "bank": 1,
+        "program": 55,
+        "name": "Orchestra Hit 2"
+      },
+      {
+        "bank": 1,
+        "program": 56,
+        "name": "Trumpet 2"
+      },
+      {
+        "bank": 1,
+        "program": 57,
+        "name": "Trombone 2"
+      },
+      {
+        "bank": 1,
+        "program": 60,
+        "name": "French Horn 2"
+      },
+      {
+        "bank": 1,
+        "program": 61,
+        "name": "Brass Section 2"
+      },
+      {
+        "bank": 1,
+        "program": 71,
+        "name": "Clarinet 2"
+      },
+      {
+        "bank": 1,
+        "program": 72,
+        "name": "Piccolo 2"
+      },
+      {
+        "bank": 1,
+        "program": 73,
+        "name": "Flute 2"
+      },
+      {
+        "bank": 1,
+        "program": 74,
+        "name": "Recorder 2"
+      },
+      {
+        "bank": 1,
+        "program": 76,
+        "name": "Blown Bottle 2"
+      },
+      {
+        "bank": 1,
+        "program": 77,
+        "name": "Shakuhachi 2"
+      },
+      {
+        "bank": 1,
+        "program": 78,
+        "name": "Whistlin'"
+      },
+      {
+        "bank": 1,
+        "program": 80,
+        "name": "Square Lead 2"
+      },
+      {
+        "bank": 1,
+        "program": 81,
+        "name": "Death Synth"
+      },
+      {
+        "bank": 1,
+        "program": 82,
+        "name": "Triangle Wave"
+      },
+      {
+        "bank": 1,
+        "program": 86,
+        "name": "Synth Brass Fifths"
+      },
+      {
+        "bank": 1,
+        "program": 87,
+        "name": "Bass Lead 2"
+      },
+      {
+        "bank": 1,
+        "program": 88,
+        "name": "Fantasia 2"
+      },
+      {
+        "bank": 1,
+        "program": 91,
+        "name": "Space Voice 2"
+      },
+      {
+        "bank": 1,
+        "program": 98,
+        "name": "Crystal 2"
+      },
+      {
+        "bank": 1,
+        "program": 105,
+        "name": "Banjo 2"
+      },
+      {
+        "bank": 1,
+        "program": 114,
+        "name": "Steel Drum 2"
+      },
+      {
+        "bank": 1,
+        "program": 115,
+        "name": "Wrench Clang"
+      },
+      {
+        "bank": 1,
+        "program": 122,
+        "name": "Rain"
+      },
+      {
+        "bank": 1,
+        "program": 123,
+        "name": "Kirby Hurt SFX"
+      },
+      {
+        "bank": 1,
+        "program": 124,
+        "name": "Telephone 2"
+      },
+      {
+        "bank": 1,
+        "program": 125,
+        "name": "Car Start"
+      },
+      {
+        "bank": 1,
+        "program": 126,
+        "name": "Crowd Laugh"
+      },
+      {
+        "bank": 1,
+        "program": 127,
+        "name": "Destruction"
+      },
+      {
+        "bank": 2,
+        "program": 1,
+        "name": "Bass Piano"
+      },
+      {
+        "bank": 2,
+        "program": 29,
+        "name": "Overdriven Guitar 3"
+      },
+      {
+        "bank": 2,
+        "program": 48,
+        "name": "Strings Ensemble 3"
+      },
+      {
+        "bank": 2,
+        "program": 49,
+        "name": "Slow Strings 3"
+      },
+      {
+        "bank": 2,
+        "program": 56,
+        "name": "Trumpet 3"
+      },
+      {
+        "bank": 2,
+        "program": 57,
+        "name": "Trombone 3"
+      },
+      {
+        "bank": 2,
+        "program": 60,
+        "name": "Horn Section"
+      },
+      {
+        "bank": 2,
+        "program": 80,
+        "name": "KDL Square"
+      },
+      {
+        "bank": 2,
+        "program": 81,
+        "name": "KDL Saw"
+      },
+      {
+        "bank": 2,
+        "program": 86,
+        "name": "Voice Oohs Fifths"
+      },
+      {
+        "bank": 2,
+        "program": 87,
+        "name": "KDL Bass Lead"
+      },
+      {
+        "bank": 2,
+        "program": 88,
+        "name": "Fantasia 3"
+      },
+      {
+        "bank": 2,
+        "program": 108,
+        "name": "Tinker Bell 2"
+      },
+      {
+        "bank": 2,
+        "program": 122,
+        "name": "Thunder"
+      },
+      {
+        "bank": 2,
+        "program": 126,
+        "name": "Mic Kirby"
+      },
+      {
+        "bank": 2,
+        "program": 127,
+        "name": "Halberd Shot"
+      },
+      {
+        "bank": 3,
+        "program": 48,
+        "name": "Strings Section"
+      },
+      {
+        "bank": 3,
+        "program": 55,
+        "name": "Euro Hit"
+      },
+      {
+        "bank": 3,
+        "program": 80,
+        "name": "Square Wave 3"
+      },
+      {
+        "bank": 3,
+        "program": 87,
+        "name": "Bass Lead 3"
+      },
+      {
+        "bank": 3,
+        "program": 88,
+        "name": "Fantasia 4"
+      },
+      {
+        "bank": 3,
+        "program": 122,
+        "name": "Wind"
+      },
+      {
+        "bank": 3,
+        "program": 123,
+        "name": "Bird 2"
+      },
+      {
+        "bank": 3,
+        "program": 124,
+        "name": "Door"
+      },
+      {
+        "bank": 3,
+        "program": 126,
+        "name": "Punch"
+      },
+      {
+        "bank": 3,
+        "program": 127,
+        "name": "Explosion"
+      },
+      {
+        "bank": 4,
+        "program": 80,
+        "name": "Square Wave 4"
+      },
+      {
+        "bank": 4,
+        "program": 87,
+        "name": "Bass Lead 4"
+      },
+      {
+        "bank": 4,
+        "program": 122,
+        "name": "Stream"
+      },
+      {
+        "bank": 4,
+        "program": 125,
+        "name": "Car Crash"
+      },
+      {
+        "bank": 5,
+        "program": 55,
+        "name": "Poppin' Hit"
+      },
+      {
+        "bank": 5,
+        "program": 80,
+        "name": "Square Wave 5"
+      },
+      {
+        "bank": 5,
+        "program": 122,
+        "name": "Bubbles"
+      },
+      {
+        "bank": 5,
+        "program": 123,
+        "name": "Crickets"
+      },
+      {
+        "bank": 5,
+        "program": 124,
+        "name": "Windchimes"
+      },
+      {
+        "bank": 5,
+        "program": 125,
+        "name": "Siren"
+      },
+      {
+        "bank": 5,
+        "program": 126,
+        "name": "Footstep"
+      },
+      {
+        "bank": 6,
+        "program": 80,
+        "name": "Square Wave 6"
+      },
+      {
+        "bank": 6,
+        "program": 125,
+        "name": "Engine"
+      },
+      {
+        "bank": 6,
+        "program": 126,
+        "name": "Crowd Talk"
+      },
+      {
+        "bank": 7,
+        "program": 125,
+        "name": "Jet Sound"
+      },
+      {
+        "bank": 7,
+        "program": 126,
+        "name": "Misc. Crowd Noises"
+      },
+      {
+        "bank": 8,
+        "program": 0,
+        "name": "Crappy Piano"
+      },
+      {
+        "bank": 8,
+        "program": 2,
+        "name": "Acoustic Piano 3"
+      },
+      {
+        "bank": 8,
+        "program": 4,
+        "name": "Rhodes Piano 2"
+      },
+      {
+        "bank": 8,
+        "program": 5,
+        "name": "FM Piano 2"
+      },
+      {
+        "bank": 8,
+        "program": 9,
+        "name": "Synth Glockenspiel"
+      },
+      {
+        "bank": 8,
+        "program": 12,
+        "name": "Wide Marimba"
+      },
+      {
+        "bank": 8,
+        "program": 13,
+        "name": "Xylophone 3"
+      },
+      {
+        "bank": 8,
+        "program": 14,
+        "name": "Tubular Bells 2"
+      },
+      {
+        "bank": 8,
+        "program": 16,
+        "name": "Detuned Dwbr. Organ"
+      },
+      {
+        "bank": 8,
+        "program": 19,
+        "name": "Church Organ 2"
+      },
+      {
+        "bank": 8,
+        "program": 20,
+        "name": "Wind Organ"
+      },
+      {
+        "bank": 8,
+        "program": 21,
+        "name": "Accordian 2"
+      },
+      {
+        "bank": 8,
+        "program": 25,
+        "name": "12-String Guitar"
+      },
+      {
+        "bank": 8,
+        "program": 28,
+        "name": "Funk Guitar"
+      },
+      {
+        "bank": 8,
+        "program": 30,
+        "name": "Feedback Guitar"
+      },
+      {
+        "bank": 8,
+        "program": 31,
+        "name": "Guitar Feedback"
+      },
+      {
+        "bank": 8,
+        "program": 32,
+        "name": "Acoustic Bass 3"
+      },
+      {
+        "bank": 8,
+        "program": 33,
+        "name": "FM Bass"
+      },
+      {
+        "bank": 8,
+        "program": 38,
+        "name": "Synth Bass 3"
+      },
+      {
+        "bank": 8,
+        "program": 39,
+        "name": "Synth Bass 4"
+      },
+      {
+        "bank": 8,
+        "program": 40,
+        "name": "Violin (Slow)"
+      },
+      {
+        "bank": 8,
+        "program": 45,
+        "name": "Bass Pizzicato"
+      },
+      {
+        "bank": 8,
+        "program": 48,
+        "name": "Strings Ensemble 4"
+      },
+      {
+        "bank": 8,
+        "program": 49,
+        "name": "Slow Strings 4"
+      },
+      {
+        "bank": 8,
+        "program": 52,
+        "name": "Choir Woohs"
+      },
+      {
+        "bank": 8,
+        "program": 53,
+        "name": "Voice Oohs 2"
+      },
+      {
+        "bank": 8,
+        "program": 54,
+        "name": "Synth Voice (Atk)"
+      },
+      {
+        "bank": 8,
+        "program": 55,
+        "name": "Impact Hit"
+      },
+      {
+        "bank": 8,
+        "program": 56,
+        "name": "Trumpet 4"
+      },
+      {
+        "bank": 8,
+        "program": 61,
+        "name": "Brass Section 3"
+      },
+      {
+        "bank": 8,
+        "program": 62,
+        "name": "Synth Brass 3"
+      },
+      {
+        "bank": 8,
+        "program": 63,
+        "name": "Synth Brass 4"
+      },
+      {
+        "bank": 8,
+        "program": 74,
+        "name": "Recorder 3"
+      },
+      {
+        "bank": 8,
+        "program": 75,
+        "name": "Pan Flute 2"
+      },
+      {
+        "bank": 8,
+        "program": 80,
+        "name": "Sine Wave"
+      },
+      {
+        "bank": 8,
+        "program": 81,
+        "name": "Sawtooth Wave 2"
+      },
+      {
+        "bank": 8,
+        "program": 87,
+        "name": "Bass Lead 5"
+      },
+      {
+        "bank": 8,
+        "program": 104,
+        "name": "Tambura"
+      },
+      {
+        "bank": 8,
+        "program": 107,
+        "name": "Koto 2"
+      },
+      {
+        "bank": 8,
+        "program": 115,
+        "name": "Castanets"
+      },
+      {
+        "bank": 8,
+        "program": 117,
+        "name": "Melodic Tom 2"
+      },
+      {
+        "bank": 8,
+        "program": 118,
+        "name": "Canvas Curse Tom"
+      },
+      {
+        "bank": 8,
+        "program": 120,
+        "name": "Guitar Fret Noise 2"
+      },
+      {
+        "bank": 8,
+        "program": 125,
+        "name": "Warp Star Pass"
+      },
+      {
+        "bank": 9,
+        "program": 4,
+        "name": "Chorused Rhodes"
+      },
+      {
+        "bank": 9,
+        "program": 52,
+        "name": "Sky Sands Choir"
+      },
+      {
+        "bank": 9,
+        "program": 81,
+        "name": "Sawtooth Wave 3"
+      },
+      {
+        "bank": 9,
+        "program": 125,
+        "name": "Emergency!"
+      },
+      {
+        "bank": 10,
+        "program": 55,
+        "name": "Impact Hit 2"
+      },
+      {
+        "bank": 10,
+        "program": 80,
+        "name": "Warp Star SFX"
+      },
+      {
+        "bank": 11,
+        "program": 14,
+        "name": "Tubular Bells 3"
+      },
+      {
+        "bank": 11,
+        "program": 39,
+        "name": "Synth Bass 5"
+      },
+      {
+        "bank": 11,
+        "program": 48,
+        "name": "Strings Ensemble 5"
+      },
+      {
+        "bank": 11,
+        "program": 49,
+        "name": "Slow String 5"
+      },
+      {
+        "bank": 11,
+        "program": 61,
+        "name": "Brass Section 4"
+      },
+      {
+        "bank": 11,
+        "program": 78,
+        "name": "Whistle 2"
+      },
+      {
+        "bank": 11,
+        "program": 81,
+        "name": "Sawtooth Stab"
+      },
+      {
+        "bank": 11,
+        "program": 87,
+        "name": "Bass Lead 6"
+      },
+      {
+        "bank": 11,
+        "program": 98,
+        "name": "Crystal 3"
+      },
+      {
+        "bank": 11,
+        "program": 112,
+        "name": "Gamelan"
+      },
+      {
+        "bank": 11,
+        "program": 119,
+        "name": "Cymbal"
+      },
+      {
+        "bank": 12,
+        "program": 38,
+        "name": "String 'n' Bass"
+      },
+      {
+        "bank": 12,
+        "program": 119,
+        "name": "Tambourine"
+      },
+      {
+        "bank": 16,
+        "program": 5,
+        "name": "FM Piano 3"
+      },
+      {
+        "bank": 16,
+        "program": 24,
+        "name": "Nylon Wave"
+      },
+      {
+        "bank": 16,
+        "program": 25,
+        "name": "Mandolin"
+      },
+      {
+        "bank": 16,
+        "program": 30,
+        "name": "Distortion Guitar 3"
+      },
+      {
+        "bank": 16,
+        "program": 33,
+        "name": "Finger Bass 3"
+      },
+      {
+        "bank": 16,
+        "program": 40,
+        "name": "Violin Pluck"
+      },
+      {
+        "bank": 16,
+        "program": 49,
+        "name": "Slow String 7"
+      },
+      {
+        "bank": 16,
+        "program": 56,
+        "name": "Trumpet 5"
+      },
+      {
+        "bank": 16,
+        "program": 71,
+        "name": "Clarinet 3"
+      },
+      {
+        "bank": 16,
+        "program": 75,
+        "name": "Pan Flute 3"
+      },
+      {
+        "bank": 16,
+        "program": 81,
+        "name": "Sawtooth Wave 4"
+      },
+      {
+        "bank": 17,
+        "program": 75,
+        "name": "Pan Flute 4"
+      },
+      {
+        "bank": 17,
+        "program": 80,
+        "name": "Crusty Square"
+      },
+      {
+        "bank": 17,
+        "program": 81,
+        "name": "Sawtooth Wave 5"
+      },
+      {
+        "bank": 17,
+        "program": 122,
+        "name": "White Noise"
+      },
+      {
+        "bank": 18,
+        "program": 80,
+        "name": "Square Wave 7"
+      },
+      {
+        "bank": 18,
+        "program": 81,
+        "name": "Sawtooth Wave 6"
+      },
+      {
+        "bank": 24,
+        "program": 0,
+        "name": "Piano + Strings"
+      },
+      {
+        "bank": 24,
+        "program": 1,
+        "name": "B. Piano + Strings"
+      },
+      {
+        "bank": 24,
+        "program": 4,
+        "name": "Bell Rhodes Piano"
+      },
+      {
+        "bank": 24,
+        "program": 5,
+        "name": "Bell FM Piano"
+      },
+      {
+        "bank": 24,
+        "program": 48,
+        "name": "Strings Ensemble 6"
+      },
+      {
+        "bank": 24,
+        "program": 49,
+        "name": "Slow String 6"
+      },
+      {
+        "bank": 24,
+        "program": 52,
+        "name": "Voice Lahs"
+      },
+      {
+        "bank": 24,
+        "program": 55,
+        "name": "Strings Hit"
+      },
+      {
+        "bank": 24,
+        "program": 56,
+        "name": "Trumpet 6"
+      },
+      {
+        "bank": 24,
+        "program": 80,
+        "name": "Sine Wave 2"
+      },
+      {
+        "bank": 24,
+        "program": 81,
+        "name": "Sawtooth Wave 7"
+      },
+      {
+        "bank": 25,
+        "program": 56,
+        "name": "Trumpet 7"
+      },
+      {
+        "bank": 25,
+        "program": 80,
+        "name": "Square Wave 8"
+      },
+      {
+        "bank": 25,
+        "program": 81,
+        "name": "Sawtooth Wave 8"
+      },
+      {
+        "bank": 26,
+        "program": 80,
+        "name": "Triangle Wave 2"
+      },
+      {
+        "bank": 26,
+        "program": 81,
+        "name": "Sawtooth Wave 9"
+      },
+      {
+        "bank": 27,
+        "program": 16,
+        "name": "Detuned Organ 2"
+      },
+      {
+        "bank": 27,
+        "program": 80,
+        "name": "Sine Wave 3"
+      },
+      {
+        "bank": 27,
+        "program": 81,
+        "name": "Sawtooth Wave 10"
+      },
+      {
+        "bank": 28,
+        "program": 81,
+        "name": "Sawtooth Wave 11"
+      },
+      {
+        "bank": 32,
+        "program": 0,
+        "name": "Synth Piano"
+      },
+      {
+        "bank": 32,
+        "program": 1,
+        "name": "Smash 64 Piano"
+      },
+      {
+        "bank": 32,
+        "program": 24,
+        "name": "Nylon Guitar 2"
+      },
+      {
+        "bank": 32,
+        "program": 25,
+        "name": "Steel Guitar 2"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "file": "/Users/konsumer/Documents/otherdev/lovesynth/sf2/Synensmb.sf2",
+    "instruments": [
+      {
+        "bank": 0,
+        "program": 0,
+        "name": "Synth Ensemble     "
+      }
+    ]
+  }
+]
