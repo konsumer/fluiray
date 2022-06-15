@@ -1,0 +1,20 @@
+<theme>
+  <formatVersion>7</formatVersion>
+  <include>./../theme.xml</include>
+  <view name="basic, detailed, video, grid">
+    <text name="nameLabel" extra="true">
+      <text>Soundfont</text>
+    </text>
+  </view>
+  <view name="system">
+    <text name="sys_line2" extra="true">
+      <text>Soundfont</text>
+    </text> 
+    <text name="shortdescription" extra="true">
+     <text>Synthesizers</text>
+   </text>
+   <text name="longdescription" extra="true">
+     <text>SF2 synths. Plug your MIDI keyboard in before loading one.</text>
+   </text>
+  </view>
+</theme>
