@@ -1,13 +1,12 @@
 {
   "name": "fluiray",
+  "private": true,
   "version": "0.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon fluiray.js",
     "test": "node test.js"
   },
-  "keywords": [],
   "author": "David Konsumer <konsumer@jetboystudio.com> (https://konsumer.js.org/)",
   "license": "MIT",
   "dependencies": {
