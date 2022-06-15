@@ -1,4 +1,4 @@
-Thos is files & infor for setting up a linux system.
+This is files & info for setting up a linux system.
 
 I am using ArkOS, so these instructions will be for that.
 
@@ -33,3 +33,9 @@ You might also like
 
 - [love](https://github.com/Jetup13/es-theme-epicnoir/pull/2)
 - [apps](https://github.com/Jetup13/es-theme-epicnoir/pull/1)
+
+Put your soundfonts in `/roms/sf2/`.
+
+## TODO
+
+- Notes on setting up [auto_midi_connect](https://github.com/stevelittlefish/auto_midi_connect)
