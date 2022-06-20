@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# start fluidsynth, connect keyboards, run frontend
+
+# put this in /roms2/ports/fluiray.sh
+
 function finish {
   kill -9 $(pgrep "fluidsynth")
 }
@@ -27,4 +31,4 @@ if [[ $worlde ]]; then
   echo WORLDE connected
 fi
 
-node "${DIR_CURRENT}/fluiray.js"
+node "/opt/fluiray/fluiray.js"
