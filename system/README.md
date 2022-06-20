@@ -30,7 +30,7 @@ Add this to `/etc/emulationstation/es_systems.cfg`:
   <fullname>Soundfont</fullname>
   <path>/roms/sf2</path>
   <extension>.sf2</extension>
-  <command>node /opt/fluiray/fluiray.js %ROM%</command>
+  <command>/opt/fluiray/fluiray.sh %ROM%</command>
 </system>
 ```
 
