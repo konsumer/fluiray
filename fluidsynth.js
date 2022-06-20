@@ -2,7 +2,7 @@ const net = require('net')
 const { basename } = require('path')
 
 module.exports = class FluidSynth {
-  constructor (port = 9800, host = 'localhost') {
+  constructor (port = 9800, host = '192.168.86.43') {
     this.host = host
     this.port = port
   }
@@ -10,7 +10,7 @@ module.exports = class FluidSynth {
   // run a command on server, response as promise
   command (cmd) {
     return new Promise((resolve, reject) => {
-      console.log('COMMAND:', cmd)
+      // console.log('COMMAND:', cmd)
       const client = net.createConnection(this.port, this.host, () => {})
       client.on('error', (data) => reject)
       let out = ''
@@ -29,7 +29,7 @@ module.exports = class FluidSynth {
   // returns id
   async load (filename, bankofs = 1) {
     const rLoad = /^loaded SoundFont has ID ([0-9]+)/
-    const r = rLoad.exec(await this.command(`load ${JSON.stringify(filename)} ${bankofs}`, true))
+    const r = rLoad.exec(await this.command(`load ${JSON.stringify(filename)} ${bankofs}`))
     if (r) {
       return parseInt(r[1])
     }
@@ -86,7 +86,7 @@ module.exports = class FluidSynth {
 
   // Combination of bank-select and program-change
   select (channel, font, bank, program) {
-    return this.command(`select ${channel} ${font} ${bank} ${program}`, true)
+    return this.command(`select ${channel} ${font} ${bank} ${program}`)
   }
 
   // Unloads SoundFont by ID (reset=0|1, default 1)
@@ -103,7 +103,7 @@ module.exports = class FluidSynth {
   async fonts () {
     const rFonts = /^\W+([0-9]+)\W+(.+)/gm
     const out = []
-    const r = await this.command('fonts', true)
+    const r = await this.command('fonts')
     for (const m of r.matchAll(rFonts)) {
       out.push({
         id: parseInt(m[1]),

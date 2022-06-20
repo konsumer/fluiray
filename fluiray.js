@@ -8,7 +8,6 @@ r.SetTraceLogLevel(r.LOG_ERROR)
 r.InitWindow(640, 480, 'Fluiray')
 
 const fluid = new FluidSynth()
-fluid.gain(3)
 
 // mod that handles negative wrap-around
 const mod = (n, m) => ((n % m) + m) % m
@@ -20,6 +19,8 @@ function centerText (text, fontSize, y, color = r.WHITE) {
 }
 
 async function main () {
+  await fluid.gain(3)
+
   const files = process.argv.slice(2)
   for (const f of files) {
     await fluid.load(await realpath(f))
@@ -54,7 +55,7 @@ async function main () {
     }
     if (b.includes('A')) {
       currentInstrument = currentMenuInstrument
-      fluid.select(0, fonts[currentFont].id, i[currentInstrument].bank, i[currentInstrument].program)
+      await fluid.select(0, fonts[currentFont].id, i[currentInstrument].bank, i[currentInstrument].program)
     }
 
     r.BeginDrawing()
