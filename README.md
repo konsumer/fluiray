@@ -15,3 +15,5 @@ fluidsynth -q -d -p fluidray -s -o shell.port=31337
 
 
 Hints for installation & usage can be found [here](system/).
+
+Ideas about general idea are [here](https://lucidbeaming.com/blog/running-fluidsynth-on-a-raspberry-pi-zero-w/)
