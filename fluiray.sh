@@ -26,3 +26,5 @@ if [[ $worlde ]]; then
   aconnect 'WORLDE':0 'fluiray':0
   echo WORLDE connected
 fi
+
+node "${DIR_CURRENT}/fluiray.js"

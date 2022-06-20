@@ -2,7 +2,7 @@ const net = require('net')
 const { basename } = require('path')
 
 module.exports = class FluidSynth {
-  constructor (port = 9800, host = '192.168.86.43') {
+  constructor (host = 'localhost', port = 9800) {
     this.host = host
     this.port = port
   }

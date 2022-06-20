@@ -7,7 +7,7 @@ const buttons = require('./input.js')
 r.SetTraceLogLevel(r.LOG_ERROR)
 r.InitWindow(640, 480, 'Fluiray')
 
-const fluid = new FluidSynth()
+const fluid = new FluidSynth('192.168.86.43')
 
 // mod that handles negative wrap-around
 const mod = (n, m) => ((n % m) + m) % m
@@ -34,12 +34,12 @@ async function main () {
 
   // console.log(JSON.stringify(fonts, null, 2))
 
-  const currentFont = 0
+  let currentFont = 0
   let currentInstrument = 0
   let currentMenuInstrument = 0
 
   while (!r.WindowShouldClose()) {
-    const i = fonts[currentFont].instruments
+    const i = fonts.length ? fonts[currentFont].instruments : []
     const b = buttons(true)
     const d = buttons()
 
@@ -50,12 +50,24 @@ async function main () {
     if (b.includes('UP')) {
       currentMenuInstrument = mod(currentMenuInstrument - 1, i.length)
     }
+
     if (b.includes('DOWN')) {
       currentMenuInstrument = mod(currentMenuInstrument + 1, i.length)
     }
+
+    if (b.includes('LEFT')) {
+      currentFont = mod(currentFont - 1, fonts.length)
+    }
+
+    if (b.includes('RIGHT')) {
+      currentFont = mod(currentFont + 1, fonts.length)
+    }
+
     if (b.includes('A')) {
       currentInstrument = currentMenuInstrument
-      await fluid.select(0, fonts[currentFont].id, i[currentInstrument].bank, i[currentInstrument].program)
+      if (fonts.length) {
+        await fluid.select(0, fonts[currentFont].id, i[currentInstrument].bank, i[currentInstrument].program)
+      }
     }
 
     r.BeginDrawing()
@@ -63,7 +75,11 @@ async function main () {
 
     const lockedInColor = currentMenuInstrument === currentInstrument ? r.GREEN : r.YELLOW
 
-    r.DrawText(fonts[currentFont].name, 20, 20, 20, r.BLUE)
+    if (fonts.length) {
+      r.DrawText(fonts[currentFont].name, 20, 20, 20, r.BLUE)
+    } else {
+      centerText('No fonts loaded', 50, 215, r.WHITE)
+    }
 
     if (i.length) {
       centerText(i[mod(currentMenuInstrument - 4, i.length)].name, 10, 80, r.DARKGRAY)
