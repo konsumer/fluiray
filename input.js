@@ -97,35 +97,35 @@ module.exports = function getMappedInput (once) {
       buttons.add('START')
     }
 
-    if (r.GetGamepadAxisMovement(0, AXIS_DX) < -10) {
+    if (r.GetGamepadAxisMovement(0, AXIS_DX) < -0.1) {
       buttons.add('LEFT')
     }
 
-    if (r.GetGamepadAxisMovement(0, AXIS_DX) > 10) {
+    if (r.GetGamepadAxisMovement(0, AXIS_DX) > 0.1) {
       buttons.add('RIGHT')
     }
 
-    if (r.GetGamepadAxisMovement(0, AXIS_DY) < -10) {
+    if (r.GetGamepadAxisMovement(0, AXIS_DY) < -0.1) {
       buttons.add('UP')
     }
 
-    if (r.GetGamepadAxisMovement(0, AXIS_DY) > 10) {
+    if (r.GetGamepadAxisMovement(0, AXIS_DY) > 0.1) {
       buttons.add('DOWN')
     }
 
-    if (r.GetGamepadAxisMovement(0, AXIS_AX) < -10) {
+    if (r.GetGamepadAxisMovement(0, AXIS_AX) < -0.1) {
       buttons.add('LEFT')
     }
 
-    if (r.GetGamepadAxisMovement(0, AXIS_AX) > 10) {
+    if (r.GetGamepadAxisMovement(0, AXIS_AX) > 0.1) {
       buttons.add('RIGHT')
     }
 
-    if (r.GetGamepadAxisMovement(0, AXIS_AY) < -10) {
+    if (r.GetGamepadAxisMovement(0, AXIS_AY) < -0.1) {
       buttons.add('UP')
     }
 
-    if (r.GetGamepadAxisMovement(0, AXIS_AY) > 10) {
+    if (r.GetGamepadAxisMovement(0, AXIS_AY) > 0.1) {
       buttons.add('DOWN')
     }
   }

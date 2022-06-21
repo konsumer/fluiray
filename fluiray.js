@@ -7,7 +7,12 @@ const buttons = require('./input.js')
 r.SetTraceLogLevel(r.LOG_ERROR)
 r.InitWindow(640, 480, 'Fluiray')
 
+if (r.IsGamepadAvailable(0)) {
+  console.log(`Connect to ${r.GetGamepadName(0)}`)
+}
+
 const fluid = new FluidSynth('192.168.86.43')
+// const fluid = new FluidSynth()
 
 // mod that handles negative wrap-around
 const mod = (n, m) => ((n % m) + m) % m
@@ -32,6 +37,8 @@ async function main () {
     font.instruments = await fluid.inst(font.id)
   }
 
+  // TODO: actually parse current layout to figure out what is already loaded
+
   // console.log(JSON.stringify(fonts, null, 2))
 
   let currentFont = 0
@@ -39,7 +46,7 @@ async function main () {
   let currentMenuInstrument = 0
 
   while (!r.WindowShouldClose()) {
-    const i = fonts.length ? fonts[currentFont].instruments : []
+    const { instruments } = fonts.length ? fonts[currentFont] : []
     const b = buttons(true)
     const d = buttons()
 
@@ -63,10 +70,10 @@ async function main () {
       currentFont = mod(currentFont + 1, fonts.length)
     }
 
-    if (b.includes('A')) {
+    if (b.includes('A') || b.includes('START')) {
       currentInstrument = currentMenuInstrument
       if (fonts.length) {
-        await fluid.select(0, fonts[currentFont].id, i[currentInstrument].bank, i[currentInstrument].program)
+        await fluid.select(0, fonts[currentFont].id, instruments[currentInstrument].bank, instruments[currentInstrument].program)
       }
     }
 
@@ -81,16 +88,16 @@ async function main () {
       centerText('No fonts loaded', 50, 215, r.WHITE)
     }
 
-    if (i.length) {
-      centerText(i[mod(currentMenuInstrument - 4, i.length)].name, 10, 80, r.DARKGRAY)
-      centerText(i[mod(currentMenuInstrument - 3, i.length)].name, 20, 100, r.DARKGRAY)
-      centerText(i[mod(currentMenuInstrument - 2, i.length)].name, 30, 130, r.LIGHTGRAY)
-      centerText(i[mod(currentMenuInstrument - 1, i.length)].name, 40, 170, r.WHITE)
-      centerText(i[mod(currentMenuInstrument, i.length)].name, 50, 215, lockedInColor)
-      centerText(i[mod(currentMenuInstrument + 1, i.length)].name, 40, 270, r.WHITE)
-      centerText(i[mod(currentMenuInstrument + 2, i.length)].name, 30, 320, r.LIGHTGRAY)
-      centerText(i[mod(currentMenuInstrument + 3, i.length)].name, 20, 360, r.DARKGRAY)
-      centerText(i[mod(currentMenuInstrument + 4, i.length)].name, 10, 390, r.DARKGRAY)
+    if (instruments.length) {
+      centerText(instruments[mod(currentMenuInstrument - 4, instruments.length)].name, 10, 80, r.DARKGRAY)
+      centerText(instruments[mod(currentMenuInstrument - 3, instruments.length)].name, 20, 100, r.DARKGRAY)
+      centerText(instruments[mod(currentMenuInstrument - 2, instruments.length)].name, 30, 130, r.LIGHTGRAY)
+      centerText(instruments[mod(currentMenuInstrument - 1, instruments.length)].name, 40, 170, r.WHITE)
+      centerText(instruments[mod(currentMenuInstrument, instruments.length)].name, 50, 215, lockedInColor)
+      centerText(instruments[mod(currentMenuInstrument + 1, instruments.length)].name, 40, 270, r.WHITE)
+      centerText(instruments[mod(currentMenuInstrument + 2, instruments.length)].name, 30, 320, r.LIGHTGRAY)
+      centerText(instruments[mod(currentMenuInstrument + 3, instruments.length)].name, 20, 360, r.DARKGRAY)
+      centerText(instruments[mod(currentMenuInstrument + 4, instruments.length)].name, 10, 390, r.DARKGRAY)
     }
 
     r.EndDrawing()
