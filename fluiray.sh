@@ -16,6 +16,7 @@ if pgrep -x "fluidsynth" > /dev/null; then
   echo fluidsynth already flowing
 else
   fluidsynth -si -p "fluiray" -a alsa -m alsa_seq "${DIR_SF2}"/* &
+  sleep 3
 fi
 
 worlde=$(aconnect -o | grep "WORLDE")
