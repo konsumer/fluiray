@@ -55,11 +55,11 @@ async function main () {
     }
 
     if (b.includes('UP')) {
-      currentMenuInstrument = mod(currentMenuInstrument - 1, i.length)
+      currentMenuInstrument = mod(currentMenuInstrument - 1, instruments.length)
     }
 
     if (b.includes('DOWN')) {
-      currentMenuInstrument = mod(currentMenuInstrument + 1, i.length)
+      currentMenuInstrument = mod(currentMenuInstrument + 1, instruments.length)
     }
 
     if (b.includes('LEFT')) {
