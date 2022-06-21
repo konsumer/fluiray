@@ -46,7 +46,7 @@ async function main () {
   let currentMenuInstrument = 0
 
   while (!r.WindowShouldClose()) {
-    const { instruments } = fonts.length ? fonts[currentFont] : []
+    const instruments = fonts.length ? (fonts[currentFont]?.instruments || []) : []
     const b = buttons(true)
     const d = buttons()
 
