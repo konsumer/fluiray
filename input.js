@@ -40,95 +40,58 @@ const AXIS_DY = 7
 const AXIS_AX = 0
 const AXIS_AY = 1
 
+const previosAxisState = {}
+function IsGamepadAxisPressed (gamepad, axis, direction) {
+  previosAxisState[gamepad] = previosAxisState[gamepad] || {}
+  previosAxisState[gamepad][axis] = previosAxisState[gamepad][axis] || {}
+  previosAxisState[gamepad][axis][direction] = previosAxisState[gamepad][axis][direction] || {}
+  const s = IsGamepadAxisDown(gamepad, axis, direction)
+  if (previosAxisState[gamepad][axis][direction] !== s) {
+    previosAxisState[gamepad][axis][direction] = s
+    return s
+  }
+  return false
+}
+
+function IsGamepadAxisDown (gamepad, axis, direction) {
+  const c = r.GetGamepadAxisMovement(gamepad, axis)
+  if (c < -0.75 && direction === -1) {
+    return true
+  }
+  if (c > 0.75 && direction === 1) {
+    return true
+  }
+  return false
+}
+
+// this wasn't working correctly, so I made my own
+const previosButtonState = {}
+function IsGamepadButtonPressed (gamepad, button) {
+  previosButtonState[gamepad] = previosButtonState[gamepad] || {}
+  previosButtonState[gamepad][button] = previosButtonState[gamepad][button] || {}
+  const s = r.IsGamepadButtonDown(gamepad, button)
+  if (previosButtonState[gamepad][button] !== s) {
+    previosButtonState[gamepad][button] = s
+    return s
+  }
+  return false
+}
+
 module.exports = function getMappedInput (once) {
   const k = once ? r.IsKeyPressed : r.IsKeyDown
-  const b = once ? r.IsGamepadButtonPressed : r.IsGamepadButtonDown
+  const b = once ? IsGamepadButtonPressed : r.IsGamepadButtonDown
+  const a = once ? IsGamepadAxisPressed : IsGamepadAxisDown
 
-  const buttons = new Set()
-
-  if (k(r.KEY_X)) {
-    buttons.add('A')
-  }
-  if (k(r.KEY_Z)) {
-    buttons.add('B')
-  }
-  if (k(r.KEY_A)) {
-    buttons.add('Y')
-  }
-  if (k(r.KEY_S)) {
-    buttons.add('X')
-  }
-  if (k(r.KEY_UP)) {
-    buttons.add('UP')
-  }
-  if (k(r.KEY_DOWN)) {
-    buttons.add('DOWN')
-  }
-  if (k(r.KEY_LEFT)) {
-    buttons.add('LEFT')
-  }
-  if (k(r.KEY_RIGHT)) {
-    buttons.add('RIGHT')
-  }
-  if (k(r.KEY_RIGHT_SHIFT)) {
-    buttons.add('SELECT')
-  }
-  if (k(r.KEY_ENTER)) {
-    buttons.add('START')
-  }
-
-  if (r.IsGamepadAvailable(0)) {
-    if (b(0, GAMEPAD_A)) {
-      buttons.add('A')
-    }
-    if (b(0, GAMEPAD_B)) {
-      buttons.add('B')
-    }
-    if (b(0, GAMEPAD_Y)) {
-      buttons.add('Y')
-    }
-    if (b(0, GAMEPAD_X)) {
-      buttons.add('X')
-    }
-    if (b(0, GAMEPAD_SELECT)) {
-      buttons.add('SELECT')
-    }
-    if (b(0, GAMEPAD_START)) {
-      buttons.add('START')
-    }
-
-    if (r.GetGamepadAxisMovement(0, AXIS_DX) < -0.1) {
-      buttons.add('LEFT')
-    }
-
-    if (r.GetGamepadAxisMovement(0, AXIS_DX) > 0.1) {
-      buttons.add('RIGHT')
-    }
-
-    if (r.GetGamepadAxisMovement(0, AXIS_DY) < -0.1) {
-      buttons.add('UP')
-    }
-
-    if (r.GetGamepadAxisMovement(0, AXIS_DY) > 0.1) {
-      buttons.add('DOWN')
-    }
-
-    if (r.GetGamepadAxisMovement(0, AXIS_AX) < -0.1) {
-      buttons.add('LEFT')
-    }
-
-    if (r.GetGamepadAxisMovement(0, AXIS_AX) > 0.1) {
-      buttons.add('RIGHT')
-    }
-
-    if (r.GetGamepadAxisMovement(0, AXIS_AY) < -0.1) {
-      buttons.add('UP')
-    }
-
-    if (r.GetGamepadAxisMovement(0, AXIS_AY) > 0.1) {
-      buttons.add('DOWN')
-    }
-  }
-
-  return [...buttons]
+  const buttons = []
+  if (k(r.KEY_X) || b(0, GAMEPAD_A)) buttons.push('A')
+  if (k(r.KEY_Z) || b(0, GAMEPAD_B)) buttons.push('B')
+  if (k(r.KEY_A) || b(0, GAMEPAD_Y)) buttons.push('Y')
+  if (k(r.KEY_S) || b(0, GAMEPAD_X)) buttons.push('X')
+  if (k(r.KEY_RIGHT_SHIFT) || b(0, GAMEPAD_SELECT)) buttons.push('SELECT')
+  if (k(r.KEY_ENTER) || b(0, GAMEPAD_START)) buttons.push('START')
+  if (k(r.KEY_UP) || a(0, AXIS_DY, -1) || a(0, AXIS_AY, -1)) buttons.push('UP')
+  if (k(r.KEY_DOWN) || a(0, AXIS_DY, 1) || a(0, AXIS_AY, 1)) buttons.push('DOWN')
+  if (k(r.KEY_LEFT) || a(0, AXIS_DX, -1) || a(0, AXIS_AX, -1)) buttons.push('LEFT')
+  if (k(r.KEY_RIGHT) || a(0, AXIS_DX, 1) || a(0, AXIS_AX, 1)) buttons.push('RIGHT')
+  return buttons
 }
