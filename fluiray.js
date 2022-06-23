@@ -11,7 +11,7 @@ if (r.IsGamepadAvailable(0)) {
   console.log(`Connect to ${r.GetGamepadName(0)}`)
 }
 
-const fluid = new FluidSynth('192.168.86.43')
+const fluid = new FluidSynth()
 // const fluid = new FluidSynth()
 
 // mod that handles negative wrap-around
