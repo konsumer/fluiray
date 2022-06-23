@@ -13,7 +13,7 @@ You need to run fluidsynth:
 fluidsynth -q -d -p fluidray -s
 ```
 
-I included [an example script](fluiray.sh) that connects my midi keyboard to the synth.
-
+- I included [an example script](fluiray.sh) that connects my midi keyboard to the synth.
 - Hints for installation & usage can be found [here](system/).
 - Similar project (with no UI) [here](https://lucidbeaming.com/blog/running-fluidsynth-on-a-raspberry-pi-zero-w/)
+- [This](https://github.com/konsumer/fluiray/blob/main/fluidsynth.js) is a fairly complete TCP client for fluidsynth that you can use in your own thing
