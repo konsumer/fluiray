@@ -12,7 +12,6 @@ if (r.IsGamepadAvailable(0)) {
 }
 
 const fluid = new FluidSynth()
-// const fluid = new FluidSynth()
 
 // mod that handles negative wrap-around
 const mod = (n, m) => ((n % m) + m) % m
